@@ -35,7 +35,7 @@ import type {
   MessageParam,
   MessageCreateParams,
   MessageStreamEvent,
-} from '@anthropic-ai/sdk/resources/messages.mjs';
+} from '@anthropic-ai/sdk/resources/messages';
 import type Anthropic from '@anthropic-ai/sdk';
 import type { CandidateData, ToolDefinition } from 'genkit/model';
 
@@ -575,6 +575,8 @@ describe('fromAnthropicResponse', () => {
           output_tokens: 20,
           cache_creation_input_tokens: null,
           cache_read_input_tokens: null,
+          server_tool_use: null,
+          service_tier: null,
         },
       },
       expectedOutput: {
@@ -617,6 +619,8 @@ describe('fromAnthropicResponse', () => {
           output_tokens: 20,
           cache_creation_input_tokens: null,
           cache_read_input_tokens: null,
+          server_tool_use: null,
+          service_tier: null,
         },
       },
       expectedOutput: {

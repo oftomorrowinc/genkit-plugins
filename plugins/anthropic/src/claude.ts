@@ -46,7 +46,7 @@ import type {
   MessageParam,
   MessageStreamEvent,
   ToolUseBlockParam,
-} from '@anthropic-ai/sdk/resources/messages.mjs';
+} from '@anthropic-ai/sdk/resources/messages';
 
 export const AnthropicConfigSchema = GenerationCommonConfigSchema.extend({
   tool_choice: z
@@ -197,6 +197,7 @@ export const SUPPORTED_CLAUDE_MODELS: Record<
   string,
   ModelReference<typeof AnthropicConfigSchema>
 > = {
+  'claude-4-sonnet': claude4Sonnet,
   'claude-3-7-sonnet': claude37Sonnet,
   'claude-3-5-sonnet': claude35Sonnet,
   'claude-3-opus': claude3Opus,
